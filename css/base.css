@@ -1,0 +1,144 @@
+/* ------------- CSS Reset -------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* ------------- Typography -------------- */
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/inter-regular-webfont.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/inter-medium-webfont.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/inter-semibold-webfont.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("../assets/fonts/playfairdisplay-bold-webfont.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+h4 {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+a {
+    font-family: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ------------- MEDIA QUERIES ----------------- */
+
+@media (min-width: 640px){
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
