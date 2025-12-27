@@ -7,21 +7,111 @@
         
         <title>World Travel</title>
         
+        <script type="module" src="/js/main.js"></script>
+        <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
         <link rel="stylesheet" href="/css/base.css">
         <link rel="stylesheet" href="/css/components.css">
         <link rel="stylesheet" href="/css/layout.css">
     </head>
     <body>
-        <header>
+        <header class="site-header">
+            <div class="nav-overlay"></div>
+            <nav class="top-nav">
+                <img class="site-logo" src="/assets/icons/world-travel-logo.png">
 
+                <button class="top-nav-hamburger">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#8DDF12">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> 
+                            <path d="M4 18L20 18" stroke="#8DDF12" stroke-width="2" stroke-linecap="round"></path> 
+                            <path d="M4 12L20 12" stroke="#8DDF12" stroke-width="2" stroke-linecap="round"></path> 
+                            <path d="M4 6L20 6" stroke="#8DDF12" stroke-width="2" stroke-linecap="round"></path> 
+                        </g>
+                    </svg>
+                </button>
+                <button class="nav-panel-close">X</button>
+                <div class="nav-links">
+                    <div class="nav-panel-header">
+                        <img src="/assets/icons/world-travel-logo.png" alt="World Travel Logo">
+                    </div>
+                    <ul class="top-nav-main-menu">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="/blog/index.html">BLOG</a></li>
+                        <li><a href="/destinations/index.html">DESTINATIONS</a>
+                            <ul class="sub-menu">
+                                <li><a href="/destinations/africa/index.html">AFRICA</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/destinations/africa/egypt.html">EGYPT</a></li>
+                                        <li><a href="/destinations/africa/kenya.html">KENYA</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/destinations/americas/index.html">AMERICAS</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/destinations/americas/north_america/index.html">NORTH AMERICA</a>
+                                            <ul>
+                                                <li><a href="/destinations/americas/north_america/canada.html">CANADA</a></li>
+                                                <li><a href="/destinations/americas/north_america/usa.html">USA</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/destinations/americas/central_america/index.html">CENTRAL AMERICA</a>
+                                            <ul>
+                                                <li><a href="/destinations/americas/central_america/mexico.html">MEXICO</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/destinations/americas/south_america/index.html">SOUTH AMERICA</a>
+                                            <ul>
+                                                <li><a href="/destinations/americas/south_america/argentina.html">ARGENTINA</a></li>
+                                                <li><a href="/destinations/americas/south_america/chile.html">CHILE</a></li>
+                                                <li><a href="/destinations/americas/south_america/brasil.html">BRASIL</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="/destinations/asia/index.html">ASIA</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/destinations/asia/china.html">CHINA</a></li>
+                                        <li><a href="/destinations/asia/india.html">INDIA</a></li>
+                                        <li><a href="/destinations/asia/japan.html">JAPAN</a></li>
+                                        <li><a href="/destinations/asia/south-korea.html">SOUTH KOREA</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/destinations/europe/index.html">EUROPE</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/destinations/europe/france.html">FRANCE</a></li>
+                                        <li><a href="/destinations/europe/germany.html">GERMANY</a></li>
+                                        <li><a href="/destinations/europe/ireland.html">IRELAND</a></li>
+                                        <li><a href="/destinations/europe/italy.html">ITALY</a></li>
+                                        <li><a href="/destinations/europe/lithuania.html">LITHUANIA</a></li>
+                                        <li><a href="/destinations/europe/poland.html">POLAND</a></li>
+                                        <li><a href="/destinations/europe/spain.html">SPAIN</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/gallery/index.html">GALLERY</a></li>
+                        <li><a href="/about/index.html">ABOUT</a></li>
+                        <li><a href="/contact/index.html">CONTACT</a></li>
+                    </ul>
+                    <div class="nav-panel-socials">
+                        <img src="/assets/icons/icon-facebook.svg" alt="Facebook Icon">
+                        <img src="/assets/icons/icon-instagram.svg" alt="Instagram Icon">
+                        <img src="/assets/icons/icon-pinterest.svg" alt="Pinterest Icon">
+                        <img src="/assets/icons/icon-youtube.svg" alt="Youtube Icon">
+                        <img src="/assets/icons/icon-envelope.svg" alt="Envelope Icon">
+                        <img src="/assets/icons/icon-rss.svg" alt="RSS Icon">
+                    </div>
+                </div>
+            </nav>
         </header>
         <main>
             <section class="hero hero-large">
                 <video src="/assets/videos/hero-video.mp4" autoplay muted loop></video>
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
-                    <h1>Discover the World, One Journey at a Time</h1>
-                    <p>Stories, guides, and photography from destinations around the globe — inspiring you to explore beyond the familiar and travel with intention.</p>
+                    <h1>DISCOVER THE WORLD, ONE JOURNEY AT A TIME</h1>
+                    <p>Stories, guides, and photography from destinations around the globe - inspiring you to explore beyond the familiar and travel with intention.</p>
+                    <a class="hero-btn">EXPLORE</a>
                 </div>
             </section>
         </main>

@@ -75,6 +75,7 @@ body {
 
 h1 {
     font-family: "Playfair Display", serif;
+    word-spacing: 0.5rem;
     font-weight: 700;
     line-height: 1.2;
     font-size: 2.5rem;
@@ -124,6 +125,7 @@ a {
 
     h1 {
         font-size: 4rem;
+        word-spacing: 0.6rem;
     }
 
     p {
@@ -136,6 +138,7 @@ a {
 
     h1 {
         font-size: 5rem;
+        word-spacing: 1rem;
     }
 
     p {

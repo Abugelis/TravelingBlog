@@ -1,5 +1,6 @@
 /* ------------- HERO SECTION -------------- */
 
+/* Hero wrapper: centers content and creates stacking context */
 .hero {
     width: 100%;
     display: flex;
@@ -9,6 +10,7 @@
     overflow: hidden;
 }
 
+/* Size variants for different page contexts */
 .hero-large {
     height: 100svh;
 }
@@ -17,6 +19,7 @@
     height: 50svh;
 }
 
+/* Background video layer */
 .hero video {
     position: absolute;
     top: 0;
@@ -27,6 +30,7 @@
     z-index: 1;
 }
 
+/* Dark overlay to improve text readability */
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -34,6 +38,7 @@
     z-index: 2;
 }
 
+/* Content layer/top layer */
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -48,24 +53,414 @@
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* -------------- BUTTONS --------------------- */
+
+/* Primary hero CTA */
+.hero-btn {
+    font-weight: 500;
+    border: 2px solid white;
+    padding: 0.5em 4em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    font-weight: 500;
+    background-color: #8DDF12;
+    border: 2px solid #8DDF12;
+}
+
+
+/* Close button for mobile navigation panel */
+.nav-panel-close {
+    position: fixed;
+    top: 1rem;
+    left: 280px; /* aligns with open nav edge */
+    width: 36px;
+    height: 36px;
+    display: none; /* show only when nav is open */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    z-index: 6;
+    cursor: pointer;
+}
+
+/* ---------------TOP NAVIGATION ----------------*/
+
+/* Main header navigation bar */
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    font-weight: 500;
+    z-index: 4;
+}
+
+/* Logo sizing scales via media queries */
+.site-logo {
+    height: 40px;
+    width: auto;
+}
+
+/* Sliding mobile navigation panel */
+.nav-links {
+    position: fixed;
+    top: 0;
+    left: -110%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-bottom: 2rem;
+    background-color: white;
+    width: 260px;
+    height: 100svh;
+    z-index: 5;
+    transition: left 0.3s ease;
+}
+
+/* Mobile menu layout */
+.top-nav-main-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+
+/* --------- Burger Nav Separators ------- */
+
+.top-nav-main-menu > li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.top-nav-main-menu > li:last-child {
+    border-bottom: none;
+}
+
+/* ------------ Sliding Hanmburger Panel --------*/
+
+.nav-panel-header {
+    display: flex;
+    padding: 0.5rem;
+    background-color: black;
+    align-items: center;
+}
+
+/* Social icons section inside sliding mobile panel */
+.nav-panel-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-height: 1rem;
+    gap: 0.5rem;
+    padding: 2rem;
+    border-top: 2px solid #8DDF12;
+}
+
+/* Background overlay when the panel is open */
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 4;
+    display: none;
+}
+
+/* Hamburger button (mobile only) */
+.top-nav-hamburger {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border: none;
+}
+
+/* Nav open state toggles */
+.site-header.nav-open .nav-panel-close {
+    display: flex;
+}
+
+.site-header.nav-open .nav-links {
+    left: 0;
+}
+
+.site-header.nav-open .top-nav-hamburger {
+    display: none;
+}
+
+
+/* ----------------- Expandable Submenus --------*/
+
+/* Default hidden submenu state (mobile) */
+.sub-menu,
+.sub-menu ul {
+    display: none;
+}
+
+/* JS controlled open states */
+.sub-menu.open,
+.sub-menu ul.open {
+    display: block;
+}
+
+/* Arrow indicator for items in submenus (mobile) */
+.top-nav-main-menu li:has(ul) > a::after {
+    content: "\276F";
+    display: inline-block;
+    margin-left: auto;
+    font-size: 1rem;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+/* Align text and arrow */
+.top-nav-main-menu li:has(ul) > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Rotate arrow when submenu is open */
+.top-nav-main-menu li.open-parent > a::after {
+    transform: rotate(-90deg);
+}
+
+/* Submenu spacing */
+.top-nav-main-menu ul {
+    padding: 0.5rem;
+}
+
+.top-nav-main-menu ul li + li {
+    margin-top: 0.5rem;
+}
+
+/* Indentation for submenu levels */
+.top-nav-main-menu ul li a {
+    padding: 0.25rem 0.5rem;
+}
+
+.top-nav-main-menu ul ul li a {
+    padding-left: 1rem;
+}
+
+.top-nav-main-menu ul ul ul li a {
+    padding-left: 1.5rem;
+}
+
+/* Active link highlight */
+.top-nav-main-menu li a.active {
+    color: #8DDF12;  
+    border-radius: 4px;  
+}
+
 /* ------------- MEDIA QUERIES ----------------- */
 
+/* Tablets breakpoint */
 @media (min-width: 640px){
 
+    .site-logo {
+        height: 50px;
+    }
+
 }
 
+/* Laptop/small desktop breakpoint
+ - switches from mobile burger menu to horizontal hover-based menu */
 @media (min-width: 1024px) {
 
+    /* Allow hero content to breathe on wider viewports */
     .hero-content {
-        max-width: 60rem;
+        max-width: 100%;
+    }
+
+    /* Logo sizing for desktop */
+    .site-logo {
+        height: 60px;
+    }
+
+    /* Header height adapts to content rather than fixed mobile sizing */
+    .site-header,
+    .top-nav {
+        height: auto;
+    }
+
+    /* Desktop nav layout. Logo and menus separated with responsive spacing */
+    .top-nav {
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(2rem, 10vw, 12rem);
+    }
+
+    /* Enable desktop only underline animation */
+    .top-nav-main-menu > li > a::after {
+        display: block;
+    }
+
+    /* Switch nav container from off-canvas to inline*/
+    .nav-links {
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        left: auto;
+        min-width: auto;
+        overflow: visible;
+        padding: 0;
+    }
+
+    /* Horizontal main menu layout */
+    .top-nav-main-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .top-nav-main-menu > li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-bottom: 1rem; /* Hover buffer for dropdowns */
+    }
+
+    .top-nav-main-menu > li > a {
+        position: relative;
+        padding: 0.5rem 0;
+        line-height: 1;
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    /* Disable mobile submenu arrows */
+    .top-nav-main-menu li:has(ul) > a::after {
+        display: none;
+    }
+
+    /* Remove JS submenu state on desktop*/
+    .sub-menu,
+    .sub-menu.open,
+    .top-nav-main-menu li.open-parent > ul {
+        display: none;
+    }
+
+    /* Dropdown Level 1 */
+    .top-nav-main-menu > li > ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 0.5rem 0;
+        padding-top: 2rem;
+        border-radius: 6px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        display: none;
+    }
+
+    .top-nav-main-menu > li:hover > ul,
+    .top-nav-main-menu > li:focus-within > ul {
+        display: block;
+    }
+    
+
+    /* Dropdown Level 2 */
+    .top-nav-main-menu ul li {
+        position: relative;
+    }
+
+    .top-nav-main-menu ul li > ul {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        min-width: 200px;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 0.75rem 0;
+        border-radius: 6px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        display: none;
+    }
+
+    .top-nav-main-menu ul li:hover > ul,
+    .top-nav-main-menu ul li:focus-within > ul {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease, visibility 0s 0s;
+    }
+
+    /* Dropdown link styling (desktop) */
+    .top-nav-main-menu ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        color: white;
+    }
+
+    .top-nav-main-menu ul li a:hover {
+        background: rgba(0,0,0,0.1);
+    }
+
+    /* Remove mobile only UI elements */
+    .top-nav-hamburger,
+    .nav-panel-header,
+    .nav-panel-socials {
+        display: none;
+    }
+
+    /* Hover interactions */
+
+    .top-nav-main-menu > li > a:hover,
+    .top-nav-main-menu > li > ul a:hover {
+        color: #8DDF12;
+    }
+
+    /* Center-out underline animation for main menu only */
+
+    .top-nav-main-menu > li > a::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background: #8DDF12;
+        transform: translateX(-50%);
+        transition: width 0.25s ease;
+    }
+
+    .top-nav-main-menu > li:hover > a::before {
+        width: 100%;
     }
 
 }
 
+/* Large desktop breakpoint */
 @media (min-width: 1440px) {
 
-    .hero-content {
-        max-width: 70rem;
+     .top-nav {
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 25rem;
     }
-
+    
+    .hero-content {
+        max-width: 80%;
+    }
 }
