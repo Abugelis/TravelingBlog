@@ -130,6 +130,21 @@
     cursor: pointer;
 }
 
+.newsletter-btn {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    color: white;
+    border: 2px solid #8DDF12;
+    background: #8DDF12;
+}
+
 /* ---------------TOP NAVIGATION ----------------*/
 
 /* Main header navigation bar */
@@ -404,9 +419,86 @@
     padding: 0.8rem 0.5rem;
 }
 
-/* -------------- BLOG POSTS AREA -------------- */
+.home-section.destination {
+    padding-bottom: 4rem;
+}
 
+/* -------------- CONTACT ME AREA -------------- */
 
+.contact-me-home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-me-home img {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.contact-me-home-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.contact-me-content {
+    position: absolute;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    padding: 6rem 0;
+    text-shadow: 1px 1px 4px black;
+}
+
+.contact-me-content h2 {
+    padding-bottom: 2rem;
+}
+
+.get-in-touch {
+    color: #8DDF12;
+}
+
+/* -------------- NEWSLETTER SECTION ------------ */
+
+.newsletter {
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.newsletter-header {
+    padding-bottom: 2rem;
+}
+
+.newsletter-header h2 {
+    padding-bottom: 1rem;
+}
+
+.newsletter-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.newsletter-input {
+    padding: 0.5rem 1rem;
+    min-width: 360px;
+    text-align: left;
+    
+}
 
 /* ------------- MEDIA QUERIES ----------------- */
 
@@ -417,6 +509,17 @@
         height: 50px;
     }
 
+    .contact-me-content {
+        max-width: 80%;
+    }
+
+    .contact-me-home {
+        max-height: 25rem;
+    }
+
+    .contact-me-home img {
+        max-height: 25rem;
+    }
 }
 
 /* Laptop/small desktop breakpoint
@@ -657,6 +760,16 @@
         gap: 1rem;
     }
 
+    /* --------------- NEWSLETTER AREA ------------- */
+
+    .newsletter-input-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .newsletter-btn {
+        padding: 0.5rem 4rem;
+    }
 }
 
 /* Large desktop breakpoint */
