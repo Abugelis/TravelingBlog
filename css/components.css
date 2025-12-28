@@ -288,18 +288,18 @@
 /* ----------- FEATURED CONTENT AREA ----------- */
 
 /* Main container for the featured content section (cards + author section) */
-.featured-content-section {
+.home-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 90%;
     text-align: center;
 }
 
 /* Section header with decorative lines */
-.featured-header {
+.section-header {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -310,8 +310,8 @@
     max-width: 800px;
 }
 
-.featured-header::before,
-.featured-header::after {
+.section-header::before,
+.section-header::after {
     content: "";
     flex: 1;
     height: 2px;
@@ -320,15 +320,16 @@
 }
 
 /* Make the entire featured card clickable and stack content vertically */
-.featured-card a {
+.home-card a {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     padding-bottom: 2rem;
+    font-weight: bold;
 }
 
 /* Card image styling */
-.featured-card img {
+.home-card img {
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 10px;
 }
@@ -385,6 +386,9 @@
 #envelope-icon {
     padding: 0.8rem 0.5rem;
 }
+
+/* -------------- BLOG POSTS AREA -------------- */
+
 
 
 /* ------------- MEDIA QUERIES ----------------- */
@@ -580,18 +584,18 @@
     }
 
     /* Wrapper for individual cards, horizontal */
-    .featured-card-wrapper {
+    .home-card-wrapper {
         display: flex;
         flex-direction: row;
         gap: 1rem;
     }
 
     /* Make image slightly lighter on hover */
-    .featured-card img {
+    .home-card img {
         transition: filter 0.3s ease, transform 0.3s ease;
     }
 
-    .featured-card img:hover {
+    .home-card img:hover {
         filter: brightness(1.2);
         transform: scale(1.02);
     }
@@ -626,6 +630,14 @@
     .author-content-wrapper {
         display: flex;
         flex-direction: column;
+    }
+
+    /* ------------------ BLOG POST AREA -------------- */
+
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 
 }
