@@ -90,6 +90,23 @@
     background: #8DDF12;
 }
 
+/* Destinations section button*/
+
+.destinations-home-btn {
+    background: white;
+    border: 2px solid black;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px gray;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.destinations-home-btn:hover {
+    font-weight: 500;
+    background-color: #8DDF12;
+    border: 2px solid #8DDF12;
+}
 
 /* Close button for mobile navigation panel */
 .nav-panel-close {
@@ -634,7 +651,7 @@
 
     /* ------------------ BLOG POST AREA -------------- */
 
-    .blog-grid {
+    .home-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
