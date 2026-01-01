@@ -148,6 +148,22 @@
     background: #8DDF12;
 }
 
+/* Contact form submit button */
+.contact-form-btn {
+    background-color: rgb(233, 233, 233);
+    border: 1px solid rgb(233, 233, 233);
+    padding: 0.8rem 4rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-top: 2rem;
+}
+
+.contact-form-btn:hover {
+    background-color: #8DDF12;
+    border: 1px solid #8DDF12;
+    color: white;
+}
+
 /* ---------------TOP NAVIGATION ----------------*/
 
 .main {
@@ -589,7 +605,7 @@
 .destinations-page-header {
     position: relative;
     max-width: 100%;
-    min-height: 30svh;
+    max-height: 40svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -620,7 +636,6 @@
 }
 
 .destinations-page-header-content {
-    position: absolute;
     color: white;
     display: flex;
     flex-direction: column;
@@ -817,6 +832,152 @@
     gap: 0.5rem;
 }
 
+/*---------------------------------------------------------------------CONTACT PAGE --------------------------------------------------------------------------------- */
+
+/* About page header wrapper */
+.contact-page-header {
+    position: relative;
+    max-width: 100%;
+    max-height: 40svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8rem 0;
+    overflow: hidden;
+}
+
+.contact-page-header img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    inset: 0;
+    z-index: 1;
+}
+
+.contact-page-overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.contact-page-header-content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5rem;
+    gap: 1rem;
+    z-index: 3;
+    text-shadow: 1px 1px 4px black;
+}
+
+/* Contact page content wrapper*/
+.contact-page-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+/* Contact page content heading styling and positioning*/
+.contact-page-content h2 {
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    gap: 1rem;
+    text-wrap: nowrap;
+}
+
+/* Decorative lines for contact page content header */
+.contact-page-content h2::before,
+.contact-page-content h2::after {
+    content: "";
+    display: block;
+    max-height: 2px;
+    min-width: 25%;
+    background-color: #8DDF12;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.contact-page-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    gap: 1rem;
+    padding: 3rem 0;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    box-shadow: 2px 2px 10px black;
+}
+
+/* Contact form label styling */
+.contact-page-form-wrapper label {
+   font-size: 1rem;
+   color: gray;
+   padding-top: 2rem;
+}
+
+/* Contact form input styling*/
+.contact-form-input {
+    min-width: 90%;
+    min-height: 3rem;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    padding: 0.6rem 0.8rem;
+    
+}
+
+/* Contact form text area constrains */
+.contact-form-input.textarea {
+    resize: vertical;
+    min-height: 10rem;
+    max-height: 30rem;
+}
+
+/* Contact FAQ wrapper*/
+.contact-faq {
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    gap: 4rem;
+    padding: 6rem 0;
+}
+
+/* FAQ card wrapper*/
+.contact-faq-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* FAQ card icon styling */
+.contact-faq-card svg {
+    height: 50px;
+    fill: #8DDF12;
+}
+
 
 /* ------------- MEDIA QUERIES ----------------- */
 
@@ -856,8 +1017,7 @@
     }
 
     .destinations-page-header {
-        min-height: 40svh;
-        padding: 8rem 0;
+        min-height: 50svh;
     }
 
     .small-featured-separator {
@@ -888,6 +1048,21 @@
     .about-pictures {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Make contact form more compact */
+    .contact-page-form-wrapper {
+        max-width: 60%;
+    }
+
+    /* Swich Contact page FAQ section to 2 column grid */
+    .contact-faq {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-page-header {
+        max-height: 50svh;
     }
 }
 
@@ -1159,7 +1334,6 @@
     /* Taller hero section for desktop */
     .destinations-page-header {
         min-height: 50svh;
-        padding: 10rem 0;
     }
 
     /* Adjust decorative separator for larger screens */
@@ -1192,6 +1366,22 @@
 
     .about-page-header {
         min-height: 65svh;
+    }
+
+    .contact-page-header {
+        max-height: 50svh;
+        padding: 10rem 0;
+    }
+
+    /* Make contact form more compact for wide screens*/
+    .contact-page-form-wrapper {
+        max-width: 50%;
+    }
+
+    /* Change Contact page FAQ section to 3 column grid for wide screens*/
+    .contact-faq {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -1272,5 +1462,9 @@
     .about-main {
         display: flex;
         flex-direction: row;
+    }
+
+    .contact-page-header {
+        max-height: 60svh;
     }
 }
