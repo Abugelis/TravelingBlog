@@ -1,5 +1,3 @@
-import './nav.js';
-
 const track = document.querySelector(".about-carousel-track");
 const slides = Array.from(track.children);
 const prevBtn = document.querySelector(".about-carousel-btn-prev");
