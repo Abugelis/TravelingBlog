@@ -2014,11 +2014,10 @@
 
     .blog-post-layout {
         display: flex;
-        align-items: flex-start;
-        margin: 0 auto;
+        align-items:first baseline;
         justify-content: center;
         gap: 2rem;
-        padding: 4rem 0;
+        padding: 2rem 0 4rem 0;
         max-width: 80%;
     }
 
@@ -2042,6 +2041,7 @@
         font-weight: 400;
         font-size: 0.9rem;
     }
+
 }
 
 /*---------------------------------------------------- Large desktop breakpoint --------------------------------------------*/
