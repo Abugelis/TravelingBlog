@@ -250,6 +250,7 @@
     flex-direction: column;
     gap: 1rem;
     padding: 2rem 1rem;
+    
 }
 
 /* --------- Burger Nav Separators ------- */
@@ -639,7 +640,7 @@
 /*--------------------------------------------------------------------------- DESTINATIONS PAGE ----------------------------------------------------------------------------- */
 /* Hero header with background image and overlay */
 
-.destinations-page-header {
+.page-header {
     position: relative;
     max-width: 100%;
     max-height: 40svh;
@@ -654,7 +655,7 @@
 }
 
 /* Background image */
-.destinations-page-header img {
+.page-header img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -664,7 +665,7 @@
 }
 
 /* Dark overlay for text contrast */
-.destinations-page-overlay {
+.page-overlay {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     inset: 0;
@@ -672,7 +673,7 @@
     height: 100%;
 }
 
-.destinations-page-header-content {
+.page-header-content {
     color: white;
     display: flex;
     flex-direction: column;
@@ -879,49 +880,6 @@
 
 /*---------------------------------------------------------------------CONTACT PAGE --------------------------------------------------------------------------------- */
 
-/* About page header wrapper */
-.contact-page-header {
-    position: relative;
-    max-width: 100%;
-    max-height: 40svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-    padding: 8rem 0;
-    overflow: hidden;
-}
-
-.contact-page-header img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    inset: 0;
-    z-index: 1;
-}
-
-.contact-page-overlay {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    inset: 0;
-    height: 100%;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.contact-page-header-content {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 5rem;
-    gap: 1rem;
-    z-index: 3;
-    text-shadow: 1px 1px 4px black;
-}
 
 /* Contact page content wrapper*/
 .contact-page-content {
@@ -1025,54 +983,12 @@
 
 /*---------------------------------------------------------------------------- GALLERY PAGE ---------------------------------------------------------------------------------*/
 
-.gallery-page-header {
-    position: relative;
-    max-width: 100%;
-    max-height: 40svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-    padding: 8rem 0;
-    overflow: hidden;
-}
-
-.gallery-page-header img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    inset: 0;
-    z-index: 1;
-}
-
-.gallery-page-overlay {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    inset: 0;
-    height: 100%;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.gallery-page-header-content {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 5rem;
-    gap: 1rem;
-    z-index: 3;
-    text-shadow: 1px 1px 4px black;
-}
 
 /* Using flex instead of grid for mobile */
 .gallery-page-grid {
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 4rem 0;
     max-width: 95%;
     align-items: center;
     justify-content: center;
@@ -1131,49 +1047,6 @@
 
 /*---------------------------------------------------------------------------------- BLOG INDEX PAGE --------------------------------------------------------------------------------*/
 
-/* Blog page header wrapper */
-.blog-page-header {
-    position: relative;
-    max-width: 100%;
-    max-height: 40svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-    padding: 8rem 0;
-    overflow: hidden;
-}
-
-.blog-page-header img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    inset: 0;
-    z-index: 1;
-}
-
-.blog-page-overlay {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    inset: 0;
-    height: 100%;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.blog-page-header-content {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 5rem;
-    gap: 1rem;
-    z-index: 3;
-    text-shadow: 1px 1px 4px black;
-}
 
 /* Visual separator with icon and accent line */
 .small-blog-separator {
@@ -1349,48 +1222,7 @@
 
 /* ----------------------------------------------------------------- BLOG POSTS ------------------------------------------------------------------------------------------------*/
 
-.blog-post-header {
-    position: relative;
-    max-width: 100%;
-    max-height: 40svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-    padding: 8rem 0;
-    overflow: hidden;
-}
 
-.blog-post-header img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    inset: 0;
-    z-index: 1;
-}
-
-.blog-post-overlay {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    inset: 0;
-    height: 100%;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.blog-post-header-content {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 5rem;
-    gap: 1rem;
-    z-index: 3;
-    text-shadow: 1px 1px 4px black;
-}
 
 .blog-post-layout {
     padding: 4rem 0;
@@ -1579,7 +1411,7 @@
         min-width: 40rem ;
     }
 
-    .destinations-page-header {
+    .page-header {
         min-height: 50svh;
     }
 
@@ -1624,17 +1456,9 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .contact-page-header {
-        max-height: 50svh;
-    }
-
     .contact-page-content h2::before,
     .contact-page-content h2::after {
         min-width: 70%;
-    }
-
-    .gallery-page-header {
-        min-height: 50svh;
     }
 
     .gallery-page-grid {
@@ -1652,15 +1476,6 @@
 
     .blog-post-card p {
         display: inline-block;
-    }
-
-    .blog-post-header {
-        min-height: 50svh;
-    }
-
-    .blog-post-header p {
-        max-width: 80%;
-        margin: 0 auto;
     }
 }
 
@@ -1712,7 +1527,7 @@
         left: auto;
         min-width: auto;
         overflow: visible;
-        padding: 0;
+        padding: 0 2rem 0 0;
     }
 
     /* Horizontal main menu layout */
@@ -1928,7 +1743,7 @@
     }
 
     /* Taller hero section for desktop */
-    .destinations-page-header {
+    .page-header {
         min-height: 50svh;
     }
 
@@ -1964,11 +1779,6 @@
         min-height: 65svh;
     }
 
-    .contact-page-header {
-        max-height: 50svh;
-        padding: 10rem 0;
-    }
-
     /* Make contact form more compact for wide screens*/
     .contact-page-form-wrapper {
         max-width: 50%;
@@ -1999,12 +1809,8 @@
         width: 69vw;
     }
 
-    .blog-page-header {
-        min-height: 65svh;
-    }
-
-    .small-blog-separator {
-        padding: 4rem 0 0.5rem 3.2rem;
+    .small-blog-separator svg {
+        padding-left: 1.2rem;
     }
 
     .blog-content-grid {
@@ -2020,15 +1826,6 @@
     .blog-btn:hover {
         background-color: #a5f035;
         border: 1px solid #a5f035;
-    }
-
-    .blog-page-header {
-        min-height: 65svh;
-        max-width: 100%;
-    }
-
-    .blog-post-header {
-        min-height: 65svh;
     }
 
     .blog-post-layout {
@@ -2079,8 +1876,10 @@
         left: 0;
         width: 100%;
         align-items: center;
-        justify-content: flex-start;
-        gap: 30rem;
+    }
+
+    .nav-links {
+        padding-right: 6rem;
     }
 
     /* Adjust dropdown direction for wide screens*/
@@ -2117,8 +1916,8 @@
         min-width: 70rem;
     }
 
-    /* Increase height of destinations page header */
-    .destinations-page-header {
+    /* Increase height of page header */
+    .page-header {
         min-height: 60svh;
     }
 
@@ -2143,17 +1942,9 @@
         flex-direction: row;
     }
 
-    .contact-page-header {
-        max-height: 60svh;
-    }
-
     .gallery-page-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-    }
-
-     .gallery-page-header {
-        min-height: 60svh;
     }
 
     .lightbox-image {
@@ -2165,19 +1956,11 @@
         width: 64vw;
     }
 
-    .blog-page-header {
-        max-height: 60svh;
-    }
-
     .small-blog-separator {
         padding: 4rem 0 0.5rem 4.8rem;
     }
     
     .blog-post-card h3 {
         font-size: 1.8rem;
-    }
-
-    .blog-post-header {
-        min-height: 60svh;
     }
 }
