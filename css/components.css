@@ -429,6 +429,14 @@
     border-radius: 10px;
 }
 
+.home-card h3 {
+    transition: color 0.3s ease;
+}
+
+.home-card h3:hover {
+    color: #8DDF12;
+}
+
 /* Author section container */
 .author-section {
     display: flex;
@@ -633,8 +641,13 @@
     margin: 0 0.6rem;
 }
 
-.footer-links {
+.footer-links a {
     color: #8DDF12;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #71aa1b;
 }
 
 /*--------------------------------------------------------------------------- DESTINATIONS PAGE ----------------------------------------------------------------------------- */
