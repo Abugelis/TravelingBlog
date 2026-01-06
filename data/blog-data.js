@@ -118,5 +118,37 @@ export const blogPosts =[
     "title": "Sun and Culture in Spain",
     "image": "/assets/images/spain-home.jpg",
     "excerpt": "Warm beaches, lively cities, and unforgettable cuisine."
+  },
+  {
+    "id": 16,
+    "country": "Argentina",
+    "slug": "argentina",
+    "title": "Passion and Landscapes of Argentina",
+    "image": "/assets/images/argentina-destination-home.jpg",
+    "excerpt": "From tango-filled streets to dramatic mountains and glaciers."
+  },
+  {
+    "id": 17,
+    "country": "Brasil",
+    "slug": "brasil",
+    "title": "The Rhythm of Brasil",
+    "image": "/assets/images/brasil-destination-home.jpg",
+    "excerpt": "Vibrant cities, tropical beaches, and the pulse of South America."
+  },
+  {
+    "id": 18,
+    "country": "Chile",
+    "slug": "chile",
+    "title": "Chile’s Long and Wild Journey",
+    "image": "/assets/images/chile-destinations-home.jpg",
+    "excerpt": "A country of extremes, from deserts to glaciers and everything in between."
+  },
+  {
+    "id": 19,
+    "country": "Mexico",
+    "slug": "mexico",
+    "title": "Colors and Culture of Mexico",
+    "image": "/assets/images/mexico-destination-home.jpg",
+    "excerpt": "Ancient history, lively cities, and flavors that define a nation."
   }
 ]
