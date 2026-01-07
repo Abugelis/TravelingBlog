@@ -1692,6 +1692,7 @@
     .home-card-wrapper {
         display: flex;
         flex-direction: row;
+        flex-shrink: 0;
         gap: 1rem;
     }
 
