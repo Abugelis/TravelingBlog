@@ -416,6 +416,12 @@
     display: block;
 }
 
+.home-card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
 /* Make the entire featured card clickable and stack content vertically */
 .home-card a {
     display: flex;
@@ -426,7 +432,7 @@
 }
 
 .home-card {
-    min-height: 280px;
+    width: 100%;
 }
 
 /* Card image styling */
@@ -434,6 +440,7 @@
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 10px;
     aspect-ratio: 16 / 9;
+    width: 100%;
     object-fit: cover;
     display: block;
 }
@@ -1692,7 +1699,6 @@
     .home-card-wrapper {
         display: flex;
         flex-direction: row;
-        flex-shrink: 0;
         gap: 1rem;
     }
 
