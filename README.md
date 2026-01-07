@@ -13,6 +13,7 @@ This project was inspired by a real life traveling blog site. The goal for devel
 - Responsive horizontal/hamburger multi-level navigation
 - Contact/newsletter form integrated with a 3rd-party service
 - Picture gallery with expandable images
+- Open Graph social preview card
 
 ## Installation
 1. Clone the repo: `git clone https://github.com/Abugelis/TravelingBlog`
