@@ -9,6 +9,6 @@ grid.innerHTML = blogPosts.map(post => `
     <h3>${post.title}</h3>
     <div class="blog-post-decorative-line"></div>
     <p>${post.excerpt}</p>
-    <a href="../blog/${post.slug}.html" class="blog-btn">READ MORE &#11166;</a>
+    <a href="../blog/${post.slug}.html" class="blog-btn">READ MORE →</a>
   </article>
 `).join("");
