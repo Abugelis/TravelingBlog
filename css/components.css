@@ -425,12 +425,17 @@
     font-weight: bold;
 }
 
+.home-card {
+    min-height: 280px;
+}
+
 /* Card image styling */
 .home-card img {
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 10px;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+    display: block;
 }
 
 .home-card h3 {
